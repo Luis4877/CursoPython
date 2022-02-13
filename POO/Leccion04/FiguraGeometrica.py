@@ -1,21 +1,23 @@
 class FiguraGeometrica:
-    def __init__(self,ancho,alto):
+    def __init__(self, ancho, alto):
         self._ancho = ancho
         self._alto = alto
 
-    def ancho(self,ancho):
-        self._ancho = ancho
-
+    @property
     def ancho(self):
         return self._ancho
 
-    def alto(self,alto):
-        self._alto = alto
+    @ancho.setter
+    def ancho(self, ancho):
+        self._ancho = ancho
 
+    @property
     def alto(self):
-        return self._alto
+        return self.alto
 
+    @alto.setter
+    def alto(self, alto):
+        self._alto = alto
 
     def __str__(self):
         return f'El alto es de :{self._alto} y el ancho es de :{self._ancho}'
-

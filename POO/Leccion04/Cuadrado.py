@@ -2,22 +2,14 @@ from Color import Color
 from FiguraGeometrica import FiguraGeometrica
 
 
-class Cuadrado(FiguraGeometrica,Color):
+class Cuadrado(FiguraGeometrica, Color):
 
-    def __init__(self,lado,color):
-        FiguraGeometrica.__init__(self,lado,lado)
-        Color.__init__(self,color)
-
+    def __init__(self, lado, color):
+        FiguraGeometrica.__init__(self, lado, lado)
+        Color.__init__(self, color)
 
     def calcularArea(self):
-     return self.alto * self.ancho
+        return self._alto * self._ancho
 
-
-
-
-cuadro1 = Cuadrado(5,'Rojo')
-
-print(cuadro1.calcularArea())
-
-print(Cuadrado.mro())
-
+    def __str__(self):
+        return f'Los datos del cuadrado son:{FiguraGeometrica.__str__(self)},{Color.__str__(self)}'
