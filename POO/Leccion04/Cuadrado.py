@@ -19,5 +19,5 @@ cuadro1 = Cuadrado(5,'Rojo')
 
 print(cuadro1.calcularArea())
 
-
+print(Cuadrado.mro())
 
